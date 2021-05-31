@@ -13,7 +13,7 @@ static void testForm(Bureaucrat& bur, Form* form)
 
 static void testIntern(Intern& intern, const std::string &form_name, const std::string &target_name)
 {
-    Bureaucrat sign("name", 1);
+    Bureaucrat sign("hson", 1);
     Form *totest = NULL;
 
     std::cout << std::endl;

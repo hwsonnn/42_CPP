@@ -2,7 +2,6 @@
 
 Squad::Squad() : cnt(0), units(0)
 {
-
 }
 
 Squad::~Squad()
@@ -75,7 +74,3 @@ int Squad::push(ISpaceMarine* marine)
 	}
 	return (cnt);
 }
-
-//처음에 push 에서 각 units를 clone하고 다 delete units[i] 시켰는데
-//생성소멸 출력문자가 계속 나옴
-//=> units[i]는 delete 하지 않고 유지! 더블포인터 주소만 풀어준다

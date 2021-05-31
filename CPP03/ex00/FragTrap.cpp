@@ -79,7 +79,7 @@ void FragTrap::takeDamage(unsigned int amount)
 	std::cout << name << " takes " \
 			<< damage << " points of damage!" << std::endl;
 	hp -= damage;	
-	if (hpp <= 0)
+	if (hp <= 0)
 	{
 		hp = 0;
 		std::cout << name << " is dead!" << std::endl;

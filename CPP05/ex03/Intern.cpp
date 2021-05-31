@@ -72,14 +72,3 @@ const char *Intern::InvalidFormException::what() const throw()
 {
 	return ("Exception: Invalid Form\n");
 }
-
-/*
-	create_form[0](formTarget)
-	func1()
-	{
-		return (new )
-	}
-
-	Form (*fcnPtr)(std::string) = 
-	PresidentialPardonForm *intern(formTarget);
-*/

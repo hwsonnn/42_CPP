@@ -2,25 +2,19 @@
 
 Character::Character(void) : name("unknown"), AP(40), wp(0)
 {
-	// std::cout<<"Character"<<std::endl;	
 }
 
 Character::Character(std::string const &name) : name(name), AP(40), wp(0)
 {
-	// std::cout<<"Character"<<std::endl;
 }
 
 Character::~Character()
 {
-	// if (wp)
-	// 	delete wp;
-	// std::cout<<"Character Bye"<<std::endl;
 }
 
 Character::Character(const Character& src)
 {
 	*this = src;
-	// std::cout<<"Character"<<std::endl;
 }
 
 Character& Character::operator=(const Character& src)
@@ -48,12 +42,10 @@ void Character::attack(Enemy* enemy)
 		return ;
 	if (AP < wp->getAPCost())
 		return ;
-	AP -= wp->getAPCost();
 	std::cout<<name<<" attack "<<enemy->getType()<<" with a "<<wp->getName()<<std::endl;
+	AP -= wp->getAPCost();
 	wp->attack();
 	enemy->takeDamage(wp->getDamage());
-	// if (enemy.getHP() <= 0)
-	// 	delete enemy;
 }
 
 std::string Character::getName() const

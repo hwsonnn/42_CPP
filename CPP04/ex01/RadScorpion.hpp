@@ -7,7 +7,6 @@ class RadScorpion : public Enemy
 {
 	public:
 		RadScorpion();
-		// RadScorpion(int hp, std::string const& type);
 		virtual ~RadScorpion();
 		RadScorpion(const RadScorpion& src);
 		RadScorpion& operator=(const RadScorpion& src);

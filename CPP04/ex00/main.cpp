@@ -8,12 +8,13 @@ int main(void)
 
     Victim jim("Jimmy");
     Peon joe("Joe");
-    // Peon A(joe);
+    Peon A(joe);
 
-    std::cout << robert << jim << joe;
+    std::cout << robert << jim << joe << A;
 
     robert.polymorph(jim);
     robert.polymorph(joe);
+    robert.polymorph(A);
 
 	return (0);
 }
