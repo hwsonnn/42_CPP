@@ -1,19 +1,4 @@
-#include <iostream>
-#include <iomanip>
-
-//아무것도 입력받지 않았을 때에 대한 처리!! 다 그냥 엔터일 때
-
-class Contact
-{
-	private:
-		std::string contents[11];
-		static std::string info[11];
-
-	public:
-		void	input_contact(void);
-		void	show_contact(void);
-		void	show_all(void);
-};
+#include "PhoneBook.hpp"
 
 std::string Contact::info[11] = 
 {
@@ -53,19 +38,6 @@ void	Contact::show_all(void)
 	for (int i = 0; i < 11; i++)
 		std::cout << info[i] << " : " << contents[i] << std::endl;
 }
-
-
-class PhoneBook
-{
-	private:
-		int		num;
-		Contact	contact[8];
-
-	public:
-		PhoneBook(void);
-		void	add_contact(void);
-		void	search_contact(void);
-};
 
 PhoneBook::PhoneBook(void)
 {
