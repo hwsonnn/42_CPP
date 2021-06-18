@@ -16,6 +16,12 @@ void	Contact::input_contact(void)
 		std::getline(std::cin, contents[i]);
 		if (std::cin.eof())
 			exit(-1);
+		if (contents[i] == "")
+		{
+			std::cout << "No information. Try Again" << std::endl;
+			i--;
+			continue;
+		}
 	}
 }
 
