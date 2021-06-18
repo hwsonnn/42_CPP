@@ -32,7 +32,6 @@ int	main(int argc, char **argv)
 			if ((start = str.find(s1, start)) == std::string::npos)
 				break;
 			str.replace(start, s1.length(), s2);
-			//start 위치를 조정 안해도 되는지?
 		}
 		fout << str;
 		if (!fin.eof())
