@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-# include <ctime>
-# include <cstdlib>
+#include <ctime>
+#include <cstdlib>
 
 struct Data
 {
