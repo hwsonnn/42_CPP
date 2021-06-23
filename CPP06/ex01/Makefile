@@ -1,4 +1,4 @@
-NAME = convert
+NAME = serialize
 CFLAG = -Wall -Wextra -Werror #-g3 -fsanitize=address
 
 SRCS = main.cpp
