@@ -4,6 +4,7 @@
 
 int main(void)
 {
+	// const Array<int> i_arr(42);
 	Array<int> i_arr(42);
 	Array<std::string> s_arr(3);
 
@@ -12,7 +13,7 @@ int main(void)
 		std::cout << i_arr.size() << std::endl;
 		for (unsigned int i = 0; i < i_arr.size(); i++)
 		{
-			i_arr[i] = i;
+			i_arr[i] = i; //const로 하면 쓸 수는 없지만 읽을 수는 있어야함
 			std::cout << i_arr[i] << " ";
 		}
 		std::cout << std::endl;

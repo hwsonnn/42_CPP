@@ -3,7 +3,7 @@
 #include <string>
 
 template <typename T>
-void f(T p)
+void f(T &p) //근데 매개변수로 참조를 뺐을 때도 컴파일이 됐음
 {
 	std::cout << p << std::endl;
 }

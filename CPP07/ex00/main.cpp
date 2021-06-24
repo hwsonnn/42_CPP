@@ -2,10 +2,26 @@
 # include <iostream>
 # include <string>
 
+class Awesome {
+	private:
+		int _n;
+		
+	public:
+		Awesome( int n ) : _n( n ) {}
+		bool operator==( Awesome const & rhs ) const { return (this->_n == rhs._n); }
+		bool operator!=( Awesome const & rhs ) const{ return (this->_n != rhs._n); }
+		bool operator>( Awesome const & rhs ) const { return (this->_n > rhs._n); }
+		bool operator<( Awesome const & rhs ) const { return (this->_n < rhs._n); }
+		bool operator>=( Awesome const & rhs ) const { return (this->_n >= rhs._n); }
+		bool operator<=( Awesome const & rhs ) const { return (this->_n <= rhs._n); }
+};
+
 int main(void)
 {
 	int a = 2;
 	int b = 3;
+	// Awesome a(4);
+	// Awesome b(2);
 
 	::swap( a, b );
 	std::cout << "a = " << a << ", b = " << b << std::endl;

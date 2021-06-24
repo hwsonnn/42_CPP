@@ -19,9 +19,11 @@ class Array
 		{
 			arr = new T[n];
 			_size = n;
+			for (unsigned int i = 0; i < _size; i++)
+				arr[i] = T();
 		}
-		// *this = ref로 하려 했으나 애초에 할당된게 없기 때문에 o
-		// perator에 있는 delete를 하면 abort가 뜸
+		// *this = ref로 하려 했으나 애초에 할당된게 없기 때문에
+		// operator에 있는 delete를 하면 abort가 뜸
 		Array(const Array &ref) 
 		{
 			_size = ref.size();
@@ -48,6 +50,15 @@ class Array
 		}
 
 		T& operator[](unsigned int i)
+		{
+			if (i >= _size)
+				throw OutOfLimit();
+			else
+				return (arr[i]);
+		}
+
+		//const Array로 정의한 것도 인덱스 접근이 가능해야함!
+		T& operator[](unsigned int i) const
 		{
 			if (i >= _size)
 				throw OutOfLimit();
