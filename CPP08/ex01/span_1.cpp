@@ -46,8 +46,8 @@ void Span::addNumber(int num)
 }
 
 // 우선 컨테이너에 있는 클래스들을 사용을 안했고
-// algorithm 헤더에 있는 std::sort 등을 .. 배열에서도 쓸 수 있나 ..?ㄷ
-// 낫 클린코드 느낌 ,, 일일이 비교하는 것 같아 ,,
+// algorithm 헤더에 있는 std::sort 등을 배열에서도 쓸 수  ..?
+// 낫 클린코드 느낌 , 일일이 비교하는 것 같아 ,,
 long long int Span::shortestSpan(void)
 {
 	if (N <= 1)
@@ -61,7 +61,7 @@ long long int Span::shortestSpan(void)
 	return (tmp);
 }
 
-// 그리고 애초에 잘못 해석했어. 값 사이의 최대최소 차이가 아니라
+// 그리고 애초에 잘못 해석했음. 값 사이의 최대최소 차이가 아니라
 // 안에 있는 값 전체를 대상으로 비교하는 거였어
 long long int Span::longestSpan(void)
 {
